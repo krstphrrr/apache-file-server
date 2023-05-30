@@ -1,0 +1,10 @@
+# test data 
+**/*.csv
+**/*.xlsx 
+**/*.accdb
+
+# temp files 
+**/*.pyc
+
+# local logs 
+/logs
