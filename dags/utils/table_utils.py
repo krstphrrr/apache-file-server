@@ -2,9 +2,9 @@ import pandas as pd
 import os
 from psycopg2 import sql
 import numpy as np
-import src.utils.dbconfig as dbc
-import src.utils.schema as stools
-import src.utils.tables as tables
+import utils.dbconfig as dbc
+import utils.schema as stools
+import utils.tables as tables
 
 def table_create(tablename: str, conn:str=None):
     """

@@ -2,10 +2,10 @@ import pandas as pd
 import os
 import json
 from datetime import datetime
-import src.utils.ingester as ing # Ingester
-import src.utils.table_utils as tutils
-import src.utils.tables as tbl
-import src.utils.dbconfig as dbc
+import utils.ingester as ing # Ingester
+import utils.table_utils as tutils
+import utils.tables as tbl
+import utils.dbconfig as dbc
 import six
 # parse types per table
 # schema_chooser("aero_runs")
@@ -13,7 +13,7 @@ import six
 
 def schema_chooser(tablename, which=0):
     #  PATH TO EXCEL FILE WITH SCHEMA
-    schema_dir = json.load(open(file=os.path.normpath(os.path.join(os.getcwd(),"src","utils","config.json") )))["schema_dir"]
+    schema_dir = json.load(open(file=os.path.normpath(os.path.join(os.getcwd(),"dags","utils","config.json") )))["schema_dir"]
 
     # SCHEMA PATH LOADER
     schema_list = [

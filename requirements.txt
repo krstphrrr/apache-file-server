@@ -3,11 +3,13 @@ python-decouple
 apache-airflow-providers-apache-spark
 requests
 pandas
+pg
 
 sqlalchemy 
-psycopg2
+# psycopg2
 tqdm
 urllib3 
 xlrd
 geopandas
 pyproj
+openpyxl

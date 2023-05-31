@@ -1,6 +1,6 @@
 {
-  "schema_dir":"./schemas",
-  "tall_dir":"./csv",
-  "projects_dir": "./csv",
+  "schema_dir":"./dags/schemas",
+  "tall_dir":"./dags/csv",
+  "projects_dir": "./dags/csv",
   "local_tif_path": "C:/Users/kbonefont/Downloads/modismerge/modis_merge.tif"
 }
