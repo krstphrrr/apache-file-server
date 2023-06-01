@@ -16,3 +16,19 @@ def create_command(tablename):
       verb = verb.replace('"PrimaryKey" TEXT,','"PrimaryKey" TEXT UNIQUE,')
 
     return verb
+
+def _files_available():
+    import os
+    dir = os.path.normpath(os.path.join(os.getcwd(),'dags','csv'))
+    tall_files = {
+        os.path.splitext(i)[0]:os.path.normpath(f"{dir}/{i}") for
+            i in os.listdir(dir) if not i.endswith(".xlsx")
+            and not i.endswith(".ldb")
+            and not i.startswith("~$")
+            }
+    
+    return tall_files
+
+def _files_number():
+    import os 
+
