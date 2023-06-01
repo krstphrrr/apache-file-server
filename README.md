@@ -7,3 +7,9 @@ require a db connection made from the airflow GUI under admin>connections.
 part of the airflow's set of containers:
   a. the db user had to be created, permissions determined, pg_hba.conf edited
   b. the local pg instance had to be included in the airflows docker stack's network, otherwise airflow will not connect to the external db. 
+
+## pipeline flow 
+
+1. drop packet into network folder 
+- airflow continuously checks the folder to progress 
+2. packet found, projects table is retrieved

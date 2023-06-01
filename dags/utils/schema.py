@@ -41,7 +41,6 @@ def schema_chooser(tablename, which=0):
             excel_dataframe[i] = excel_dataframe[i].apply(
                 lambda x: str(x).replace('\xa0', '').strip() if
                     (type(x)!='float') and
-                    # (type(x)=='int') and
                     (pd.isnull(x)!=True)
                     else x
                 )

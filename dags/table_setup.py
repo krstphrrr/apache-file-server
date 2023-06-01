@@ -1,6 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.providers.http.sensors.http import HttpSensor
 from utilityfuns import create_command
 
 
@@ -11,4 +12,10 @@ with DAG('table_setup', start_date=datetime(2022,1,1),
         task_id='create_table',
         postgres_conn_id='1_external_postgres_local',
         sql=create_command('geoIndicators')
+    )
+
+    is_api_available = HttpSensor(
+        task_id='is_api_available',
+        http_conn_id="nameofconnection",
+        endpoing="something/"
     )
